@@ -1,0 +1,143 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "b38566b3",
+   "metadata": {
+    "_cell_guid": "b1076dfc-b9ad-4769-8c92-a6c4dae69d19",
+    "_uuid": "8f2839f25d086af736a60e9eeb907d3b93b6e0e5",
+    "execution": {
+     "iopub.execute_input": "2025-03-08T05:16:09.541598Z",
+     "iopub.status.busy": "2025-03-08T05:16:09.541293Z",
+     "iopub.status.idle": "2025-03-08T05:16:10.416265Z",
+     "shell.execute_reply": "2025-03-08T05:16:10.415523Z"
+    },
+    "papermill": {
+     "duration": 0.879008,
+     "end_time": "2025-03-08T05:16:10.417742",
+     "exception": false,
+     "start_time": "2025-03-08T05:16:09.538734",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# This Python 3 environment comes with many helpful analytics libraries installed\n",
+    "# It is defined by the kaggle/python Docker image: https://github.com/kaggle/docker-python\n",
+    "# For example, here's several helpful packages to load\n",
+    "\n",
+    "import numpy as np # linear algebra\n",
+    "import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)\n",
+    "\n",
+    "# Input data files are available in the read-only \"../input/\" directory\n",
+    "# For example, running this (by clicking run or pressing Shift+Enter) will list all files under the input directory\n",
+    "\n",
+    "import os\n",
+    "for dirname, _, filenames in os.walk('/kaggle/input'):\n",
+    "    for filename in filenames:\n",
+    "        print(os.path.join(dirname, filename))\n",
+    "\n",
+    "# You can write up to 20GB to the current directory (/kaggle/working/) that gets preserved as output when you create a version using \"Save & Run All\" \n",
+    "# You can also write temporary files to /kaggle/temp/, but they won't be saved outside of the current session"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "2da1ee72",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-03-08T05:16:10.421422Z",
+     "iopub.status.busy": "2025-03-08T05:16:10.421080Z",
+     "iopub.status.idle": "2025-03-08T05:16:12.175551Z",
+     "shell.execute_reply": "2025-03-08T05:16:12.174219Z"
+    },
+    "papermill": {
+     "duration": 1.757735,
+     "end_time": "2025-03-08T05:16:12.177097",
+     "exception": false,
+     "start_time": "2025-03-08T05:16:10.419362",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Cloning into 'yolov10'...\r\n",
+      "remote: Enumerating objects: 20332, done.\u001b[K\r\n",
+      "remote: Total 20332 (delta 0), reused 0 (delta 0), pack-reused 20332 (from 1)\u001b[K\r\n",
+      "Receiving objects: 100% (20332/20332), 11.09 MiB | 23.42 MiB/s, done.\r\n",
+      "Resolving deltas: 100% (14352/14352), done.\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "!git clone https://github.com/THU-MIG/yolov10.git"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ac74d07e",
+   "metadata": {
+    "papermill": {
+     "duration": 0.001593,
+     "end_time": "2025-03-08T05:16:12.180961",
+     "exception": false,
+     "start_time": "2025-03-08T05:16:12.179368",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kaggle": {
+   "accelerator": "none",
+   "dataSources": [],
+   "dockerImageVersionId": 30918,
+   "isGpuEnabled": false,
+   "isInternetEnabled": true,
+   "language": "python",
+   "sourceType": "notebook"
+  },
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.12"
+  },
+  "papermill": {
+   "default_parameters": {},
+   "duration": 5.357332,
+   "end_time": "2025-03-08T05:16:12.700875",
+   "environment_variables": {},
+   "exception": null,
+   "input_path": "__notebook__.ipynb",
+   "output_path": "__notebook__.ipynb",
+   "parameters": {},
+   "start_time": "2025-03-08T05:16:07.343543",
+   "version": "2.6.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
